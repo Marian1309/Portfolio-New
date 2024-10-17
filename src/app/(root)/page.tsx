@@ -2,6 +2,8 @@
 
 import type { FC } from 'react';
 
+import Link from 'next/link';
+
 import { FiDownload } from 'react-icons/fi';
 
 import { Button } from '@/components/ui/button';
@@ -32,15 +34,17 @@ const RootPage: FC = () => {
             </p>
 
             <div className="mlg:py-0 flex flex-col items-center gap-8 py-4 md:flex-row lg:justify-start">
-              <Button
-                aria-label="download cv"
-                className="flex cursor-pointer items-center gap-2 uppercase"
-                size="lg"
-                variant="outline"
-              >
-                <span>Download CV</span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <Link href="https://drive.google.com/file/d/1O4AOJFolx6f61WqAYPGAaZbr8f0XXnkc/view?usp=drive_link">
+                <Button
+                  aria-label="download cv"
+                  className="flex cursor-pointer items-center gap-2 uppercase"
+                  size="lg"
+                  variant="outline"
+                >
+                  <span>Download CV</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </Link>
 
               <div className="pb-4 md:pb-0 xl:mb-0">
                 <Socials
