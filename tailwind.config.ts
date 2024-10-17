@@ -61,8 +61,8 @@ const config = {
         ...shadcnUIColors,
         primary: '#1c1c22',
         accent: {
-          DEFAULT: '#00ff99',
-          hover: '#00e187'
+          DEFAULT: '#7851A9',
+          hover: '#6D469C'
         }
       },
       borderRadius: {
@@ -94,6 +94,11 @@ const config = {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center'
+        },
+        '.flex-between': {
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between'
         }
       });
     })

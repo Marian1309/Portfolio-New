@@ -3,6 +3,9 @@ import type { FC, ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 
+import Header from '@/components/header';
+import { PageTransition, StairTransition } from '@/components/transitions';
+
 import './globals.scss';
 
 const jetbrainsMono = JetBrains_Mono({
@@ -23,7 +26,12 @@ type Props = {
 const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={jetbrainsMono.variable}>{children}</body>
+      <body className={jetbrainsMono.variable}>
+        <Header />
+
+        <StairTransition />
+        <PageTransition>{children}</PageTransition>
+      </body>
     </html>
   );
 };
