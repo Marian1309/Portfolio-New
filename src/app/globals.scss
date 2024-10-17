@@ -4,3 +4,9 @@
 
 @import '../styles/reset';
 @import '../styles/shadcn-ui';
+
+@layer base {
+  body {
+    @apply bg-primary font-primary leading-loose text-white;
+  }
+}

@@ -1,11 +1,15 @@
 import type { FC, ReactNode } from 'react';
 
 import type { Metadata } from 'next';
-import { Figtree } from 'next/font/google';
+import { JetBrains_Mono } from 'next/font/google';
 
 import './globals.scss';
 
-const figtree = Figtree({ subsets: ['latin'], weight: ['400'] });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  variable: '--font-jetbrainsMono'
+});
 
 export const metadata: Metadata = {
   title: 'Next.js 14',
@@ -19,7 +23,7 @@ type Props = {
 const RootLayout: FC<Props> = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={figtree.className}>{children}</body>
+      <body className={jetbrainsMono.variable}>{children}</body>
     </html>
   );
 };
