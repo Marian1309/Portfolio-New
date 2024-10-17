@@ -15,6 +15,11 @@ export const LINKS: NavigationLink[] = [
   },
   {
     id: 3,
+    name: 'Work',
+    path: '/work'
+  },
+  {
+    id: 4,
     name: 'Contact',
     path: '/contact'
   }
