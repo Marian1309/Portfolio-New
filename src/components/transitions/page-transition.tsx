@@ -18,15 +18,15 @@ const PageTransition: FC<Props> = ({ children }) => {
       <div key={pathname}>
         <motion.div
           animate={{
-            opacity: 0,
+            opacity: 1,
             transition: {
               delay: 1,
               duration: 0.4,
               ease: 'easeInOut'
             }
           }}
-          className="pointer-events-none fixed top-0 h-screen w-screen bg-primary"
-          initial={{ opacity: 1 }}
+          className="fixed h-screen w-screen bg-primary"
+          initial={{ opacity: 0 }}
         >
           {children}
         </motion.div>

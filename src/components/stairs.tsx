@@ -35,9 +35,7 @@ const Stairs: FC = () => {
             delay: reverseIndex(index) * 0.1
           }}
           variants={startAnimation}
-        >
-          1
-        </motion.div>
+        />
       ))}
     </>
   );

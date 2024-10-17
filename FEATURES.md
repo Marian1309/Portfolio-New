@@ -1,0 +1,3 @@
+- Color Picker on Header, on the left from Home Link
+- Downloading CV straightly
+- Avatar better

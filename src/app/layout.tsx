@@ -15,8 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Next.js 14',
-  description: 'Next.js 14 Starter'
+  title: 'Marian Pidchashyi | Software Developer',
+  description: "Marian's Pidchashyi CV"
 };
 
 type Props = {

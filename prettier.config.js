@@ -25,6 +25,7 @@ const prettierConfig = {
 
     '^@/lib',
     '^@/hooks',
+    '^@/components/ui/(.*)$',
     '^@/components/(.*)$',
 
     '^./ui/(.*)$',

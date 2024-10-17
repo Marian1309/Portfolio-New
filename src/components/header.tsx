@@ -14,7 +14,7 @@ const Header: FC = () => {
         {/* Logo */}
         <Link href="/">
           <h1 className="text-4xl font-semibold text-white">
-            Marian<span className="text-accent-hover">.</span>
+            Marian<span className="text-accent-hover">.</span>dev
           </h1>
         </Link>
 
@@ -23,7 +23,7 @@ const Header: FC = () => {
           <Navigation />
 
           <Link href="/contact">
-            <Button className="text-white">Hire me</Button>
+            <Button className="text-black">Hire me</Button>
           </Link>
         </div>
 
