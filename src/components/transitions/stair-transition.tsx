@@ -12,7 +12,7 @@ const StairTransition: FC = () => {
   const pathname = usePathname();
 
   return (
-    <AnimatePresence key={pathname} mode="wait">
+    <AnimatePresence key={pathname}>
       <div className="pointer-events-none fixed left-0 right-0 top-0 z-40 flex h-screen w-screen">
         <Stairs />
       </div>

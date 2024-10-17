@@ -24,7 +24,7 @@ const Avatar: FC = () => {
             className="rounded-full object-contain p-3 lg:p-4"
             fill
             priority
-            quality={100}
+            quality={90}
             src="/avatar.png"
           />
         </div>

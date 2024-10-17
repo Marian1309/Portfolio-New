@@ -3,6 +3,8 @@ import type { FC, ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 
+import 'swiper/css';
+
 import Header from '@/components/header';
 import { PageTransition, StairTransition } from '@/components/transitions';
 
@@ -10,13 +12,14 @@ import './globals.scss';
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  weight: ['500', '600', '700', '800'],
   variable: '--font-jetbrainsMono'
 });
 
 export const metadata: Metadata = {
   title: 'Marian Pidchashyi | Software Developer',
   description: "Marian's Pidchashyi CV",
+  applicationName: 'Portfolio',
   openGraph: {
     title: 'Marian Pidchashyi | Software Developer',
     description:

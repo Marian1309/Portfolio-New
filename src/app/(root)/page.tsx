@@ -33,6 +33,7 @@ const RootPage: FC = () => {
 
             <div className="mlg:py-0 flex flex-col items-center gap-8 py-4 md:flex-row lg:justify-start">
               <Button
+                aria-label="download cv"
                 className="flex cursor-pointer items-center gap-2 uppercase"
                 size="lg"
                 variant="outline"

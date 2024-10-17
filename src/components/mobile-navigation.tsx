@@ -17,11 +17,14 @@ const MobileNavigation: FC = () => {
 
   return (
     <Sheet>
-      <SheetTrigger className="flex-center">
+      <SheetTrigger aria-label="mobile menu" className="flex-center">
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
 
-      <SheetContent className="flex flex-col">
+      <SheetContent
+        aria-describedby="mobile navigation"
+        className="flex flex-col"
+      >
         <div className="mb-40 mt-32 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold text-white">

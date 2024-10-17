@@ -1,11 +1,15 @@
 import type { FC } from 'react';
 
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
 import { Button } from './ui/button';
 
-import MobileNavigation from './mobile-navigation';
 import Navigation from './navigation';
+
+const DynamicMobileNavigation = dynamic(() => import('./mobile-navigation'), {
+  ssr: false
+});
 
 const Header: FC = () => {
   return (
@@ -23,13 +27,15 @@ const Header: FC = () => {
           <Navigation />
 
           <Link href="/contact">
-            <Button className="text-black">Hire me</Button>
+            <Button aria-label="hire ne" className="text-black">
+              Hire me
+            </Button>
           </Link>
         </div>
 
         {/* Mobile Navigation */}
         <div className="xl:hidden">
-          <MobileNavigation />
+          <DynamicMobileNavigation />
         </div>
       </div>
     </header>

@@ -8,7 +8,6 @@ import Link from 'next/link';
 
 import { motion } from 'framer-motion';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
-import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper/types';
 
@@ -40,21 +39,23 @@ const WorkPage: FC = () => {
         opacity: 1,
         transition: { delay: 0.5, duration: 0.4, ease: 'easeInOut' }
       }}
-      className="py-9 xl:px-0 xl:py-16"
+      className="xl:px-0 xl:py-16"
       initial={{ opacity: 0 }}
     >
       <div className="container mx-auto">
         <div className="flex flex-col justify-center xl:flex-row xl:gap-[32px]">
           <div className="order-2 flex w-full flex-col xl:order-none xl:h-[460px] xl:w-[50%] xl:justify-between">
             <div className="flex flex-col gap-[30px]">
-              <div className="text-8xl font-extrabold leading-none">
-                {project.num}
-              </div>
+              <div className="flex items-center justify-between px-1">
+                <div className="text-8xl font-extrabold leading-none">
+                  {project.num}
+                </div>
 
-              <h2 className="flex items-center justify-start gap-x-2 text-[42px] font-bold capitalize leading-none text-white transition-all duration-500 group-hover:text-accent">
-                {project.title}
-                <Image alt="icon" height={36} src={project.icon} width={36} />
-              </h2>
+                <h2 className="flex items-center justify-start gap-x-2 text-[42px] font-bold capitalize leading-none text-white transition-all duration-500 group-hover:text-accent">
+                  {project.title}
+                  <Image alt="icon" height={36} src={project.icon} width={36} />
+                </h2>
+              </div>
 
               <p className="text-white/60">{project.description}</p>
 
@@ -101,6 +102,11 @@ const WorkPage: FC = () => {
             </div>
           </div>
 
+          <p className="block pb-4 text-center xl:hidden">
+            <strong className="text-accent">Just Swipe</strong> an image to
+            change a Project.
+          </p>
+
           <div className="w-full xl:w-[60%]">
             <Swiper
               className="mb-12 xl:h-[520px]"
@@ -129,9 +135,14 @@ const WorkPage: FC = () => {
 
               <WorkSliderButtons
                 btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex-center transition-all"
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%-22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max"
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%-22px)] xl:bottom-0 z-20 w-full justify-between"
               />
             </Swiper>
+
+            <p className="relative bottom-[75px] hidden pb-4 text-center xl:block">
+              <strong className="text-accent">Just Swipe</strong> an image to
+              change a Project.
+            </p>
           </div>
         </div>
       </div>

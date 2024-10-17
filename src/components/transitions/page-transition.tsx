@@ -14,23 +14,21 @@ const PageTransition: FC<Props> = ({ children }) => {
   const pathname = usePathname();
 
   return (
-    <AnimatePresence>
-      <div key={pathname}>
-        <motion.div
-          animate={{
-            opacity: 1,
-            transition: {
-              delay: 1,
-              duration: 0.4,
-              ease: 'easeInOut'
-            }
-          }}
-          className="bg-primary"
-          initial={{ opacity: 0 }}
-        >
-          {children}
-        </motion.div>
-      </div>
+    <AnimatePresence key={pathname}>
+      <motion.div
+        animate={{
+          opacity: 1,
+          transition: {
+            delay: 1,
+            duration: 0.4,
+            ease: 'easeInOut'
+          }
+        }}
+        className="bg-primary"
+        initial={{ opacity: 0 }}
+      >
+        {children}
+      </motion.div>
     </AnimatePresence>
   );
 };

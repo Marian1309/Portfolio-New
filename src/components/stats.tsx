@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 
 const Stats: FC = () => {
   return (
-    <section className="pb-32 pt-4 xl:pb-0 xl:pt-0">
+    <section className="pb-16 pt-4 xl:pb-0 xl:pt-0">
       <div className="container mx-auto flex-center sm:block">
         <div className="grid max-w-[80vw] grid-cols-2 gap-6 md:grid-cols-4 xl:max-w-none">
           {STATS.map((stat) => (

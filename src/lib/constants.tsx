@@ -10,11 +10,11 @@ export const LINKS: NavigationLink[] = [
     name: 'Home',
     path: '/'
   },
-  {
-    id: 2,
-    name: 'Resume',
-    path: '/resume'
-  },
+  // {
+  //   id: 2,
+  //   name: 'Resume',
+  //   path: '/resume'
+  // },
   {
     id: 3,
     name: 'Work',
@@ -100,7 +100,7 @@ export const PROJECTS: Project[] = [
     category: 'Fullstack',
     title: 'Spotify',
     description:
-      'The site "Spotify Clone" is a music streaming platform that mirrors the features of Spotify. It includes sections like "Liked Songs," "Newest Songs," and a library of popular tracks. Users can browse and play songs from various artists, view their playlists, and explore a wide range of genres. The interface resembles Spotify\'s with options to search, view your library, and manage liked songs.',
+      'The application "Spotify Clone" is a music streaming platform that mirrors the features of Spotify. It includes sections like "Liked Songs", "Newest Songs" and a library of popular tracks. Users can browse and play songs from various artists, view their playlists, and explore a wide range of genres. The interface resembles Spotify\'s with options to search, view your library, and manage liked songs.',
     stack: [
       { name: 'React' },
       { name: 'TypeScript' },

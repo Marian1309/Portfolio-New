@@ -13,7 +13,12 @@ const Socials: FC<Props> = ({ containerStyles, iconStyles }) => {
   return (
     <div className={containerStyles}>
       {SOCIALS.map(({ id, path, Icon }) => (
-        <Link className={iconStyles} href={path} key={id}>
+        <Link
+          aria-label="social link"
+          className={iconStyles}
+          href={path}
+          key={id}
+        >
           <Icon size={20} />
         </Link>
       ))}
