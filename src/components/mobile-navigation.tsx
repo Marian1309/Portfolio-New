@@ -10,7 +10,7 @@ import { CiMenuFries } from 'react-icons/ci';
 import { LINKS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from './ui/sheet';
 
 const MobileNavigation: FC = () => {
   const pathname = usePathname();
@@ -25,24 +25,25 @@ const MobileNavigation: FC = () => {
         <div className="mb-40 mt-32 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold text-white">
-              Marian<span className="text-accent">.</span>
+              Marian<span className="text-accent">.</span>dev
             </h1>
           </Link>
         </div>
 
         <nav className="flex-col gap-8 flex-center">
           {LINKS.map((link) => (
-            <Link
-              className={cn(
-                'text-xl capitalize text-white transition-all hover:text-accent',
-                link.path.toLowerCase() === pathname &&
-                  'border-b-2 border-accent text-accent'
-              )}
-              href={link.path}
-              key={link.id}
-            >
-              {link.name}
-            </Link>
+            <SheetClose asChild key={link.id}>
+              <Link
+                className={cn(
+                  'text-xl capitalize text-white transition-all hover:text-accent',
+                  link.path.toLowerCase() === pathname &&
+                    'border-b-2 border-accent text-accent'
+                )}
+                href={link.path}
+              >
+                {link.name}
+              </Link>
+            </SheetClose>
           ))}
         </nav>
       </SheetContent>

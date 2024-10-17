@@ -3,14 +3,18 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { motion } from 'framer-motion';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import type { Swiper as SwiperType } from 'swiper/types';
 
 import type { Project } from '@/types';
+
+import { PROJECTS } from '@/lib/constants';
 
 import {
   Tooltip,
@@ -19,44 +23,42 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip';
 
-const projects: Project[] = [
-  {
-    id: 1,
-    num: '01',
-    category: 'Frontend',
-    title: 'Movix',
-    description: 'Movix is a project',
-    stack: [{ name: 'Html 5' }, { name: 'Css 3' }],
-    image: '/',
-    live: 'https://movix.marian1309.vercel.app',
-    github: 'https://github.com/Marian1309/Movix'
-  }
-];
+import WorkSliderButtons from '@/components/work-slider-buttons';
 
 const WorkPage: FC = () => {
-  const [project, setProject] = useState<Project>(projects[0]);
+  const [project, setProject] = useState<Project>(PROJECTS[0]);
+
+  const handleSlideChange = (swiper: SwiperType) => {
+    const currentIndex: number = swiper.activeIndex;
+
+    setProject(PROJECTS[currentIndex]);
+  };
 
   return (
     <motion.section
-      animate={{ opacity: 1 }}
-      className="min-h-[80vh] flex-col py-12 flex-center xl:px-0"
+      animate={{
+        opacity: 1,
+        transition: { delay: 0.5, duration: 0.4, ease: 'easeInOut' }
+      }}
+      className="py-9 xl:px-0 xl:py-16"
       initial={{ opacity: 0 }}
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
+        <div className="flex flex-col justify-center xl:flex-row xl:gap-[32px]">
           <div className="order-2 flex w-full flex-col xl:order-none xl:h-[460px] xl:w-[50%] xl:justify-between">
             <div className="flex flex-col gap-[30px]">
               <div className="text-8xl font-extrabold leading-none">
                 {project.num}
               </div>
 
-              <h2 className="text-[42px] font-bold capitalize leading-none text-white transition-all duration-500 group-hover:text-accent">
-                {project.category}
+              <h2 className="flex items-center justify-start gap-x-2 text-[42px] font-bold capitalize leading-none text-white transition-all duration-500 group-hover:text-accent">
+                {project.title}
+                <Image alt="icon" height={36} src={project.icon} width={36} />
               </h2>
 
               <p className="text-white/60">{project.description}</p>
 
-              <ul className="flex gap-4">
+              <ul className="flex flex-wrap gap-4">
                 {project.stack.map((stack, index) => (
                   <li className="text-xl text-accent" key={index}>
                     {stack.name}
@@ -67,7 +69,7 @@ const WorkPage: FC = () => {
 
               <div className="border border-white/20" />
 
-              <div className="flex items-center gap-4">
+              <div className="gap-4 flex-center md:justify-start">
                 <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
@@ -99,7 +101,38 @@ const WorkPage: FC = () => {
             </div>
           </div>
 
-          <div className="w-full xl:w-[50%]">Slider</div>
+          <div className="w-full xl:w-[60%]">
+            <Swiper
+              className="mb-12 xl:h-[520px]"
+              onSlideChange={handleSlideChange}
+              slidesPerView={1}
+              spaceBetween={30}
+            >
+              {PROJECTS.map((project, index) => (
+                <SwiperSlide className="w-full" key={index}>
+                  <div className="group relative bg-pink-50/20 flex-center md:min-h-[465px]">
+                    <div className="absolute bottom-0 top-0 z-10 h-full w-full bg-black/10"></div>
+
+                    <div className="relative h-full w-full">
+                      <Image
+                        alt="project"
+                        className="h-full w-full object-cover md:min-h-[470px]"
+                        height={1000}
+                        quality={100}
+                        src={project.image}
+                        width={1000}
+                      />
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+
+              <WorkSliderButtons
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex-center transition-all"
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%-22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max"
+              />
+            </Swiper>
+          </div>
         </div>
       </div>
     </motion.section>

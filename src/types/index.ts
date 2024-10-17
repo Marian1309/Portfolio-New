@@ -16,6 +16,7 @@ export type Stat = {
   id: number;
   num: number;
   text: string;
+  more: boolean;
 };
 
 export type Project = {
@@ -26,6 +27,7 @@ export type Project = {
   description: string;
   stack: { name: string }[];
   image: string;
+  icon: string;
   live: string;
   github: string;
 };

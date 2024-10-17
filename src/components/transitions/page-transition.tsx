@@ -25,7 +25,7 @@ const PageTransition: FC<Props> = ({ children }) => {
               ease: 'easeInOut'
             }
           }}
-          className="fixed h-screen w-screen bg-primary"
+          className="bg-primary"
           initial={{ opacity: 0 }}
         >
           {children}

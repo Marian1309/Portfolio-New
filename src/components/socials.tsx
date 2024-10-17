@@ -14,7 +14,7 @@ const Socials: FC<Props> = ({ containerStyles, iconStyles }) => {
     <div className={containerStyles}>
       {SOCIALS.map(({ id, path, Icon }) => (
         <Link className={iconStyles} href={path} key={id}>
-          <Icon />
+          <Icon size={20} />
         </Link>
       ))}
     </div>
