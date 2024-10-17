@@ -16,7 +16,22 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'Marian Pidchashyi | Software Developer',
-  description: "Marian's Pidchashyi CV"
+  description: "Marian's Pidchashyi CV",
+  openGraph: {
+    title: 'Marian Pidchashyi | Software Developer',
+    description:
+      "Discover Marian's projects, experience, and expertise in the field of software development.",
+    type: 'website',
+    url: 'https://portfolio-new-marian109.vercel.app',
+    images: [
+      {
+        url: 'https://portfolio-new-marian109.vercel.app/favicon.ico',
+        width: 40,
+        height: 40,
+        alt: "Marian's Pidchashyi Portfolio"
+      }
+    ]
+  }
 };
 
 type Props = {
