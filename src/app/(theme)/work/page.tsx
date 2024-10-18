@@ -1,7 +1,6 @@
 'use client';
 
-import type { FC } from 'react';
-
+import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -23,7 +22,7 @@ import {
 
 import WorkSliderButtons from '@/components/work-slider-buttons';
 
-const WorkPage: FC = () => {
+const WorkPage: NextPage = () => {
   const { project, setProject } = useProject();
 
   const handleSlideChange = (swiper: SwiperType) => {

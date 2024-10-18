@@ -1,5 +1,4 @@
-import type { FC } from 'react';
-
+import type { NextPage } from 'next';
 import Link from 'next/link';
 
 import { FiDownload } from 'react-icons/fi';
@@ -10,7 +9,7 @@ import Avatar from '@/components/avatar';
 import Socials from '@/components/socials';
 import Stats from '@/components/stats';
 
-const RootPage: FC = () => {
+const RootPage: NextPage = () => {
   return (
     <section className="relative">
       <div className="container mx-auto">
