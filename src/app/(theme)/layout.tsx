@@ -1,6 +1,7 @@
 'use client';
 
-import { type FC, type ReactNode, useEffect } from 'react';
+import type { FC, ReactNode } from 'react';
+import { useEffect } from 'react';
 
 import type { Color } from '@/types';
 

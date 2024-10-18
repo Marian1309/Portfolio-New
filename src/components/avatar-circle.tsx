@@ -5,11 +5,6 @@ import type { FC } from 'react';
 import { motion } from 'framer-motion';
 
 const AvatarCircle: FC = () => {
-  const themeColor = {
-    purple: '262.1 83.3% 57.8%',
-    green: '142.1 76.2% 36.3%'
-  };
-
   return (
     <motion.svg
       className="h-[300px] w-[300px] xl:h-[506px] xl:w-[506px]"
@@ -26,7 +21,7 @@ const AvatarCircle: FC = () => {
         cy="253"
         initial={{ strokeDasharray: '24 10 0 0' }}
         r="250"
-        stroke={`hsl(${themeColor.purple})`}
+        stroke={`hsl(var(--text-accent))`}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="4"
