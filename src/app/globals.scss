@@ -4,13 +4,10 @@
 
 @import '../styles/reset';
 @import '../styles/shadcn-ui';
+@import '../styles/theming';
 
 @layer base {
   body {
     @apply bg-primary font-primary leading-loose text-white;
-  }
-
-  .h1 {
-    @apply pt-4 text-[48px] font-semibold leading-[1.1] xl:text-[80px];
   }
 }

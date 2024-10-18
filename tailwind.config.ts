@@ -61,11 +61,8 @@ const config = {
         ...shadcnUIColors,
         primary: '#1c1c22',
         accent: {
-          // DEFAULT: '#7851A9',
-          // hover: '#6D469C'
-
-          DEFAULT: '#00ff99',
-          hover: '#00e187'
+          DEFAULT: 'hsl(var(--text-accent))',
+          hover: 'hsl(var(--text-accent-hover))'
         }
       },
       borderRadius: {

@@ -16,7 +16,6 @@ export type Stat = {
   id: number;
   num: number;
   text: string;
-  more: boolean;
 };
 
 export type Project = {
@@ -30,4 +29,11 @@ export type Project = {
   icon: string;
   live: string;
   github: string;
+};
+
+export type Color = 'Purple' | 'Red' | 'Green' | 'Yellow' | 'Blue' | 'Rose';
+
+export type DropdownColor = {
+  id: number;
+  color: Color;
 };

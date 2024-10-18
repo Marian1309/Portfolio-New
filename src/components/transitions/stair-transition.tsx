@@ -13,18 +13,20 @@ const StairTransition: FC = () => {
 
   return (
     <AnimatePresence key={pathname}>
-      <div className="pointer-events-none fixed left-0 right-0 top-0 z-40 flex h-screen w-screen">
-        <Stairs />
-      </div>
+      <div key={pathname}>
+        <div className="pointer-events-none fixed left-0 right-0 top-0 z-40 flex h-screen w-screen">
+          <Stairs />
+        </div>
 
-      <motion.div
-        animate={{
-          opacity: 0,
-          transition: { delay: 1, duration: 0.4, ease: 'easeInOut' }
-        }}
-        className="pointer-events-none fixed h-screen w-screen bg-primary"
-        initial={{ opacity: 0 }}
-      />
+        <motion.div
+          animate={{
+            opacity: 0,
+            transition: { delay: 1, duration: 0.4, ease: 'easeInOut' }
+          }}
+          className="pointer-events-none fixed h-screen w-screen bg-primary"
+          initial={{ opacity: 0 }}
+        />
+      </div>
     </AnimatePresence>
   );
 };

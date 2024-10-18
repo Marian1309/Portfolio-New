@@ -23,7 +23,7 @@ const Stats: FC = () => {
                 duration={3.5}
                 end={stat.num}
               />
-              {stat.more && <p className="relative right-3 text-[20px]">+</p>}
+
               <p
                 className={cn(
                   'leading-snug text-white/80',

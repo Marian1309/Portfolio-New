@@ -1,5 +1,3 @@
-'use client';
-
 import type { FC } from 'react';
 
 import Link from 'next/link';
@@ -20,7 +18,7 @@ const RootPage: FC = () => {
           <div className="order-2 text-center lg:order-1 lg:text-left xl:order-none">
             <span className="text-xl">Software Developer</span>
 
-            <h1 className="h1 text-left">
+            <h1 className="pt-4 text-left text-[48px] font-semibold leading-[1.1] xl:text-[80px]">
               Hello I&apos;m <br />{' '}
               <span className="text-accent">Marian Pidchashyi</span>
             </h1>

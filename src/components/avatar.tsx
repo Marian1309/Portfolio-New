@@ -25,6 +25,7 @@ const Avatar: FC = () => {
             fill
             priority
             quality={90}
+            sizes="100% 100%"
             src="/avatar.png"
           />
         </div>

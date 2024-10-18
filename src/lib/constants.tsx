@@ -1,6 +1,12 @@
 import { FaGithub, FaLinkedinIn, FaTelegram } from 'react-icons/fa';
 
-import type { NavigationLink, Project, Social, Stat } from '@/types';
+import type {
+  DropdownColor,
+  NavigationLink,
+  Project,
+  Social,
+  Stat
+} from '@/types';
 
 import { Movix, MovixIcon, Spotify, SpotifyIcon } from '@/assets/projects';
 
@@ -49,26 +55,22 @@ export const STATS: Stat[] = [
   {
     id: 1,
     num: 2,
-    text: 'Years of experience',
-    more: true
+    text: 'Years of experience'
   },
   {
     id: 2,
     num: 13,
-    text: 'Projects completed',
-    more: false
+    text: 'Projects completed'
   },
   {
     id: 3,
     num: 18,
-    text: 'Technologies mastered',
-    more: false
+    text: 'Technologies mastered'
   },
   {
     id: 4,
     num: 125,
-    text: 'Code commmits',
-    more: true
+    text: 'Code commmits'
   }
 ];
 
@@ -115,4 +117,13 @@ export const PROJECTS: Project[] = [
     live: 'https://spotify.marian1309.vercel.app',
     github: 'https://github.com/Marian1309/Spotify'
   }
+];
+
+export const COLORS: DropdownColor[] = [
+  { color: 'Green', id: 1 },
+  { color: 'Purple', id: 2 },
+  { color: 'Blue', id: 3 },
+  { color: 'Yellow', id: 4 },
+  { color: 'Red', id: 5 },
+  { color: 'Rose', id: 6 }
 ];

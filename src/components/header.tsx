@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Button } from './ui/button';
 
 import Navigation from './navigation';
+import ThemeToggle from './theme-toggle';
 
 const DynamicMobileNavigation = dynamic(() => import('./mobile-navigation'), {
   ssr: false
@@ -18,12 +19,14 @@ const Header: FC = () => {
         {/* Logo */}
         <Link href="/">
           <h1 className="text-4xl font-semibold text-white">
-            Marian<span className="text-accent-hover">.</span>dev
+            Marian<span className="text-accent">.</span>dev
           </h1>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 xl:flex">
+          <ThemeToggle />
+
           <Navigation />
 
           <Link href="/contact">
