@@ -8,7 +8,12 @@ import type {
   Stat
 } from '@/types';
 
-import { Movix, MovixIcon, Spotify, SpotifyIcon } from '@/assets/projects';
+import {
+  MovixIcon,
+  PropertyPulseIcon,
+  SpotifyIcon
+} from '@/assets/projects/icons';
+import { Movix, PropertyPulse, Spotify } from '@/assets/projects/images';
 
 export const LINKS: NavigationLink[] = [
   {
@@ -78,23 +83,23 @@ export const PROJECTS: Project[] = [
   {
     id: 1,
     num: '01',
-    category: 'Frontend',
-    title: 'Movix',
+    category: 'Fullstack',
+    title: 'Property Pulse',
     description:
-      '"Movix" allows users to discover a vast collection of movies, TV shows, and actors. It features trending content, popular releases, and top-rated titles, with easy navigation between movies and TV shows. There is also a search function to explore specific titles. The site emphasizes user-friendly exploration of entertainment content.',
+      'The Property Pulse application helps users find the perfect rental properties, such as apartments, houses, studios, townhouses and other types of housing. It has sections for renters who can look for a place to live, as well as for owners who can add their properties for short or long term rentals. There is also a section with recommended and recent objects.',
     stack: [
       { name: 'React' },
       { name: 'TypeScript' },
       { name: 'Next.js' },
       { name: 'TailwindCSS' },
-      { name: 'React-query' },
-      { name: 'Zustand' },
-      { name: 'React-player' }
+      { name: 'MongoDB' },
+      { name: 'Next-auth' },
+      { name: 'Cloudinary' }
     ],
-    image: Movix.src,
-    icon: MovixIcon.src,
-    live: 'https://movix.marian1309.vercel.app',
-    github: 'https://github.com/Marian1309/Movix'
+    image: PropertyPulse.src,
+    icon: PropertyPulseIcon.src,
+    live: 'https://property-pulse-marian1309.vercel.app',
+    github: 'https://github.com/Marian1309/PropertyPulse'
   },
   {
     id: 2,
@@ -116,6 +121,27 @@ export const PROJECTS: Project[] = [
     icon: SpotifyIcon.src,
     live: 'https://spotify.marian1309.vercel.app',
     github: 'https://github.com/Marian1309/Spotify'
+  },
+  {
+    id: 3,
+    num: '03',
+    category: 'Frontend',
+    title: 'Movix',
+    description:
+      '"Movix" allows users to discover a vast collection of movies, TV shows, and actors. It features trending content, popular releases, and top-rated titles, with easy navigation between movies and TV shows. There is also a search function to explore specific titles. The site emphasizes user-friendly exploration of entertainment content.',
+    stack: [
+      { name: 'React' },
+      { name: 'TypeScript' },
+      { name: 'Next.js' },
+      { name: 'TailwindCSS' },
+      { name: 'React-query' },
+      { name: 'Zustand' },
+      { name: 'React-player' }
+    ],
+    image: Movix.src,
+    icon: MovixIcon.src,
+    live: 'https://movix.marian1309.vercel.app',
+    github: 'https://github.com/Marian1309/Movix'
   }
 ];
 

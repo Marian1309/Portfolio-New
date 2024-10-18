@@ -16,7 +16,11 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 
-const ThemeToggle: FC = () => {
+type Props = {
+  size?: number;
+};
+
+const ThemeToggle: FC<Props> = ({ size }) => {
   const handleColorChange = (color: Color) => {
     document.documentElement.setAttribute('data-theme', color.toLowerCase());
     localStorage.setItem('theme-color', color.toLowerCase());
@@ -25,20 +29,17 @@ const ThemeToggle: FC = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size="default" variant="outline">
+        <Button size="sm" variant="outline">
           <FaBroom
-            className='className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0'
-            size={20}
+            className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+            size={size || 20}
           />
 
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent
-        align="end"
-        className="relative bottom-[45px] right-20 flex gap-x-2"
-      >
+      <DropdownMenuContent align="end">
         {COLORS.map(({ color, id }) => (
           <DropdownMenuItem key={id} onClick={() => handleColorChange(color)}>
             {color}

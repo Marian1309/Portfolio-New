@@ -6,9 +6,12 @@ import Link from 'next/link';
 import { Button } from './ui/button';
 
 import Navigation from './navigation';
-import ThemeToggle from './theme-toggle';
 
 const DynamicMobileNavigation = dynamic(() => import('./mobile-navigation'), {
+  ssr: false
+});
+
+const DynamicThemeToggle = dynamic(() => import('./theme-toggle'), {
   ssr: false
 });
 
@@ -25,7 +28,7 @@ const Header: FC = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 xl:flex">
-          <ThemeToggle />
+          <DynamicThemeToggle />
 
           <Navigation />
 
@@ -37,7 +40,8 @@ const Header: FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="xl:hidden">
+        <div className="flex gap-x-2 xl:hidden">
+          <DynamicThemeToggle size={16} />
           <DynamicMobileNavigation />
         </div>
       </div>

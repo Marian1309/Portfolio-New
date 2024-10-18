@@ -51,7 +51,9 @@ const WorkPage: FC = () => {
                 </div>
 
                 <h2 className="flex items-center justify-start gap-x-2 text-[42px] font-bold capitalize leading-none text-white transition-all duration-500 group-hover:text-accent">
-                  {project.title}
+                  <p className="xs:max-w-[200px] max-w-[200px] text-[32px] sm:max-w-full">
+                    {project.title}
+                  </p>
                   <Image alt="icon" height={36} src={project.icon} width={36} />
                 </h2>
               </div>
@@ -69,7 +71,7 @@ const WorkPage: FC = () => {
 
               <div className="border border-white/20" />
 
-              <div className="gap-4 flex-center md:justify-start">
+              <div className="gap-4 pb-8 flex-center md:justify-start">
                 <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
