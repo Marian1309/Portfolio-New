@@ -31,7 +31,7 @@ const RootPage: NextPage = () => {
             </p>
 
             <div className="mlg:py-0 flex flex-col items-center gap-8 py-4 md:flex-row lg:justify-start">
-              <Link href="https://drive.google.com/file/d/1O4AOJFolx6f61WqAYPGAaZbr8f0XXnkc/view?usp=drive_link">
+              <Link href="https://drive.google.com/file/d/1nHjvoyj4Djpvfqims4PRd7GP95ZUl5ZJ/view?usp=sharing">
                 <Button
                   aria-label="download cv"
                   className="flex cursor-pointer items-center gap-2 uppercase"
