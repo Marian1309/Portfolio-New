@@ -1,7 +1,6 @@
 'use client';
 
 import type { FC } from 'react';
-import { useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,9 +10,9 @@ import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper/types';
 
-import type { Project } from '@/types';
-
 import { PROJECTS } from '@/lib/constants';
+
+import useProject from '@/hooks/use-project';
 
 import {
   Tooltip,
@@ -25,7 +24,7 @@ import {
 import WorkSliderButtons from '@/components/work-slider-buttons';
 
 const WorkPage: FC = () => {
-  const [project, setProject] = useState<Project>(PROJECTS[0]);
+  const { project, setProject } = useProject();
 
   const handleSlideChange = (swiper: SwiperType) => {
     const currentIndex: number = swiper.activeIndex;

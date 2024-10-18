@@ -14,8 +14,8 @@ const WorkSliderButtons: FC<Props> = ({ containerStyles, btnStyles }) => {
   const swiper = useSwiper();
 
   return (
-    <div className={containerStyles} onClick={() => swiper.slidePrev()}>
-      <button className={btnStyles}>
+    <div className={containerStyles}>
+      <button className={btnStyles} onClick={() => swiper.slidePrev()}>
         <PiCaretLeftBold />
       </button>
 
