@@ -48,7 +48,7 @@ const ImageSwiper: FC = () => {
 
         <WorkSliderButtons
           btnStyles="bg-accent hover:bg-accent-hover text-primary text-[14px] lg:text-[22px] lg:w-[44px] lg:h-[44px] w-[32px] h-[32px] flex-center transition-all"
-          containerStyles="flex gap-2 absolute right-0 bottom-[6px] z-20 w-full justify-between"
+          containerStyles="flex gap-2 absolute right-0 bottom-[6px] sm:bottom-[7px] md:bottom-0 z-20 w-full justify-between"
         />
       </Swiper>
 
