@@ -4,14 +4,14 @@ import type { FC } from 'react';
 
 import Image from 'next/image';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 import AvatarCircle from './avatar-circle';
 
 const Avatar: FC = () => {
   return (
     <div className="relative h-full w-full">
-      <motion.div
+      <m.div
         animate={{
           opacity: 1,
           transition: { delay: 1, duration: 0.4, ease: 'easeInOut' }
@@ -29,7 +29,7 @@ const Avatar: FC = () => {
             src="/avatar.png"
           />
         </div>
-      </motion.div>
+      </m.div>
 
       <AvatarCircle />
     </div>

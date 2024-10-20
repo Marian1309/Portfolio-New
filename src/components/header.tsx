@@ -7,13 +7,9 @@ import { Button } from './ui/button';
 
 import Navigation from './navigation';
 
-const DynamicMobileNavigation = dynamic(() => import('./mobile-navigation'), {
-  ssr: false
-});
+const DynamicMobileNavigation = dynamic(() => import('./mobile-navigation'));
 
-const DynamicThemeToggle = dynamic(() => import('./theme-toggle'), {
-  ssr: false
-});
+const DynamicThemeToggle = dynamic(() => import('./theme-toggle'));
 
 const Header: FC = () => {
   return (

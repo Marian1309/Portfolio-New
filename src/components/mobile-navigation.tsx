@@ -10,7 +10,13 @@ import { CiMenuFries } from 'react-icons/ci';
 import { LINKS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from './ui/sheet';
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger
+} from './ui/sheet';
 
 const MobileNavigation: FC = () => {
   const pathname = usePathname();
@@ -21,10 +27,9 @@ const MobileNavigation: FC = () => {
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
 
-      <SheetContent
-        aria-describedby="mobile navigation"
-        className="flex flex-col"
-      >
+      <SheetContent className="flex flex-col">
+        <SheetTitle className="hidden">Title</SheetTitle>
+
         <div className="mb-40 mt-32 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold text-white">

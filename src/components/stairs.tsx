@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const startAnimation = {
   initial: {
@@ -23,7 +23,7 @@ const Stairs: FC = () => {
   return (
     <>
       {[...Array(6)].map((_, index) => (
-        <motion.div
+        <m.div
           animate="animate"
           className="relative h-full w-full bg-white"
           exit="exit"

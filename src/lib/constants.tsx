@@ -8,13 +8,6 @@ import type {
   Stat
 } from '@/types';
 
-import {
-  MovixIcon,
-  PropertyPulseIcon,
-  SpotifyIcon
-} from '@/assets/projects/icons';
-import { Movix, PropertyPulse, Spotify } from '@/assets/projects/images';
-
 export const LINKS: NavigationLink[] = [
   {
     id: 1,
@@ -96,8 +89,8 @@ export const PROJECTS: Project[] = [
       { name: 'Next-auth' },
       { name: 'Cloudinary' }
     ],
-    image: PropertyPulse.src,
-    icon: PropertyPulseIcon.src,
+    image: '/projects/images/property-pulse.png',
+    icon: '/projects/icons/property-pulse-icon.webp',
     live: 'https://property-pulse-marian1309.vercel.app',
     github: 'https://github.com/Marian1309/PropertyPulse'
   },
@@ -117,8 +110,8 @@ export const PROJECTS: Project[] = [
       { name: 'Zustand' },
       { name: 'Use-sound' }
     ],
-    image: Spotify.src,
-    icon: SpotifyIcon.src,
+    image: '/projects/images/spotify.png',
+    icon: '/projects/icons/spotify-icon.svg',
     live: 'https://spotify.marian1309.vercel.app',
     github: 'https://github.com/Marian1309/Spotify'
   },
@@ -138,8 +131,8 @@ export const PROJECTS: Project[] = [
       { name: 'Zustand' },
       { name: 'React-player' }
     ],
-    image: Movix.src,
-    icon: MovixIcon.src,
+    image: '/projects/images/movix.jpg',
+    icon: '/projects/icons/movix-icon.png',
     live: 'https://movix.marian1309.vercel.app',
     github: 'https://github.com/Marian1309/Movix'
   }

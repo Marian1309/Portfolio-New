@@ -4,7 +4,7 @@ import type { FC } from 'react';
 
 import { usePathname } from 'next/navigation';
 
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, m } from 'framer-motion';
 
 import Stairs from '../stairs';
 
@@ -18,7 +18,7 @@ const StairTransition: FC = () => {
           <Stairs />
         </div>
 
-        <motion.div
+        <m.div
           animate={{
             opacity: 0,
             transition: { delay: 1, duration: 0.4, ease: 'easeInOut' }

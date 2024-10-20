@@ -4,7 +4,7 @@ import type { FC, ReactNode } from 'react';
 
 import { usePathname } from 'next/navigation';
 
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, m } from 'framer-motion';
 
 type Props = {
   children: ReactNode;
@@ -15,7 +15,7 @@ const PageTransition: FC<Props> = ({ children }) => {
 
   return (
     <AnimatePresence>
-      <motion.div
+      <m.div
         animate={{
           opacity: 1,
           transition: {
@@ -29,7 +29,7 @@ const PageTransition: FC<Props> = ({ children }) => {
         key={pathname}
       >
         {children}
-      </motion.div>
+      </m.div>
     </AnimatePresence>
   );
 };

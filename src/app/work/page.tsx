@@ -4,12 +4,8 @@ import type { NextPage } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import type { Swiper as SwiperType } from 'swiper/types';
-
-import { PROJECTS } from '@/lib/constants';
 
 import useProject from '@/hooks/use-project';
 
@@ -20,19 +16,13 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip';
 
-import WorkSliderButtons from '@/components/work-slider-buttons';
+import ImageSwiper from '@/components/image-swiper';
 
 const WorkPage: NextPage = () => {
-  const { project, setProject } = useProject();
-
-  const handleSlideChange = (swiper: SwiperType) => {
-    const currentIndex: number = swiper.activeIndex;
-
-    setProject(PROJECTS[currentIndex]);
-  };
+  const { project } = useProject();
 
   return (
-    <motion.section
+    <m.section
       animate={{
         opacity: 1,
         transition: { delay: 0.5, duration: 0.4, ease: 'easeInOut' }
@@ -53,6 +43,7 @@ const WorkPage: NextPage = () => {
                   <p className="xs:max-w-[200px] max-w-[200px] text-[32px] sm:max-w-full">
                     {project.title}
                   </p>
+
                   <Image alt="icon" height={36} src={project.icon} width={36} />
                 </h2>
               </div>
@@ -107,46 +98,10 @@ const WorkPage: NextPage = () => {
             change a Project.
           </p>
 
-          <div className="w-full xl:w-[60%]">
-            <Swiper
-              className="mb-12 xl:h-[520px]"
-              onSlideChange={handleSlideChange}
-              slidesPerView={1}
-              spaceBetween={30}
-            >
-              {PROJECTS.map((project, index) => (
-                <SwiperSlide className="w-full" key={index}>
-                  <div className="group relative bg-pink-50/20 flex-center md:min-h-[465px]">
-                    <div className="absolute bottom-0 top-0 z-10 h-full w-full bg-black/10"></div>
-
-                    <div className="relative h-full w-full">
-                      <Image
-                        alt="project"
-                        className="h-full w-full object-cover md:min-h-[470px]"
-                        height={1000}
-                        quality={100}
-                        src={project.image}
-                        width={1000}
-                      />
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-
-              <WorkSliderButtons
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex-center transition-all"
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%-22px)] xl:bottom-0 z-20 w-full justify-between"
-              />
-            </Swiper>
-
-            <p className="relative bottom-[75px] hidden pb-4 text-center xl:block">
-              <strong className="text-accent">Just Swipe</strong> an image to
-              change a Project.
-            </p>
-          </div>
+          <ImageSwiper />
         </div>
       </div>
-    </motion.section>
+    </m.section>
   );
 };
 

@@ -3,9 +3,8 @@ import type { FC, ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { JetBrains_Mono } from 'next/font/google';
 
-import 'swiper/css';
-
 import Header from '@/components/header';
+import { FramerMotionProvider, ThemeProvider } from '@/components/providers';
 import { PageTransition, StairTransition } from '@/components/transitions';
 
 import './globals.scss';
@@ -17,6 +16,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://portfolio-new-marian1309.vercel.app'),
   title: 'Marian Pidchashyi | Software Developer',
   description: "Marian's Pidchashyi CV",
   applicationName: 'Portfolio',
@@ -43,14 +43,18 @@ type Props = {
 
 const RootLayout: FC<Props> = ({ children }) => {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={jetbrainsMono.variable}>
-        <Header />
+    <ThemeProvider>
+      <FramerMotionProvider>
+        <html lang="en" suppressHydrationWarning>
+          <body className={jetbrainsMono.variable}>
+            <Header />
 
-        <StairTransition />
-        <PageTransition>{children}</PageTransition>
-      </body>
-    </html>
+            <StairTransition />
+            <PageTransition>{children}</PageTransition>
+          </body>
+        </html>
+      </FramerMotionProvider>
+    </ThemeProvider>
   );
 };
 

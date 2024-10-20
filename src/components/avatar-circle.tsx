@@ -2,17 +2,17 @@
 
 import type { FC } from 'react';
 
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 const AvatarCircle: FC = () => {
   return (
-    <motion.svg
+    <m.svg
       className="h-[300px] w-[300px] xl:h-[506px] xl:w-[506px]"
       fill="transparent"
       viewBox="0 0 506 506"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <motion.circle
+      <m.circle
         animate={{
           strokeDasharray: ['15 120 25 25', '16 25 92 72', '4 250 22 22'],
           rotate: [120, 360]
@@ -31,7 +31,7 @@ const AvatarCircle: FC = () => {
           repeatType: 'reverse'
         }}
       />
-    </motion.svg>
+    </m.svg>
   );
 };
 

@@ -9,7 +9,7 @@ type Props = {
   children: ReactNode;
 };
 
-const ThemeLayout: FC<Props> = ({ children }) => {
+const ThemeProvider: FC<Props> = ({ children }) => {
   useEffect(() => {
     const color = localStorage.getItem('theme-color') as Color;
 
@@ -19,4 +19,4 @@ const ThemeLayout: FC<Props> = ({ children }) => {
   return <>{children}</>;
 };
 
-export default ThemeLayout;
+export default ThemeProvider;
