@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description:
       "Discover Marian's projects, experience, and expertise in the field of software development.",
     type: 'website',
-    url: 'https://portfolio-new-marian109.vercel.app',
+    url: 'https://portfolio-new-marian1309.vercel.app',
     images: [
       {
         url: 'https://portfolio-new-marian1309.vercel.app/opengraph-image.png?85d34bb217557c30',
