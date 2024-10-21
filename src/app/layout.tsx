@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     url: 'https://portfolio-new-marian109.vercel.app',
     images: [
       {
-        url: 'https://portfolio-new-marian109.vercel.app/favicon.ico',
-        width: 40,
-        height: 40,
+        url: 'https://portfolio-new-marian1309.vercel.app/opengraph-image.png?85d34bb217557c30',
+        width: 1920,
+        height: 969,
         alt: "Marian's Pidchashyi Portfolio"
       }
     ]
