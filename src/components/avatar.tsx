@@ -18,7 +18,7 @@ const Avatar: FC = () => {
         }}
         initial={{ opacity: 0 }}
       >
-        <div className="absolute flex h-[298px] w-[298px] items-center justify-center mix-blend-darken xl:h-[498px] xl:w-[498px]">
+        <div className="absolute flex h-[298px] w-[298px] items-center justify-center xl:h-[498px] xl:w-[498px]">
           <Image
             alt="avatar"
             className="rounded-full object-contain p-3 lg:p-4"
